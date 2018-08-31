@@ -9,7 +9,7 @@ RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak
 RUN echo "deb http://security.ubuntu.com/ubuntu precise-security main universe" | tee -a /etc/apt/sources.list
 RUN apt-get update
 # Install tomcat utilities (we will need tomcat7-instance-create) and mysql
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y wget mysql-server mysql-client tomcat7-user tomcat7-admin
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --allow-unauthenticated wget mysql-server mysql-client tomcat7-user tomcat7-admin
 
 # Copy webanno and mysql settings to tmp
 COPY create_webanno_db.sql mysql-init /tmp/
