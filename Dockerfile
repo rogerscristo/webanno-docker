@@ -5,7 +5,7 @@ FROM tomcat:7-jre8
 
 MAINTAINER Florian Kuhn (https://github.com/fkuhn), Arne Neumann (https://github.com/arne-cl)
 
-RUN echo "deb http://security.ubuntu.com/ubuntu precise-security main universe" >> /etc/apt/source.list
+RUN echo deb http://security.ubuntu.com/ubuntu precise-security main universe >> /etc/apt/source.list
 RUN cat /etc/apt/source.list
 RUN apt-get update
 # Install tomcat utilities (we will need tomcat7-instance-create) and mysql
