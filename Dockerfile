@@ -35,7 +35,7 @@ RUN mkdir -p /usr/share/tomcat7/common/classes /usr/share/tomcat7/server/classes
 
 # Rename the webanno webapp 
 COPY webanno_initd /etc/init.d/webanno
-RUN mv /opt/webanno-webapp-3.0.0-beta-4.war /opt/webanno/webapps/webanno.war
+RUN mv /opt/webanno-webapp-3.4.5-beta-4.war /opt/webanno/webapps/webanno.war
 
 # Setup webanno as a service 
 RUN chmod +x /etc/init.d/webanno
